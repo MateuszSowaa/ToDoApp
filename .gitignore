@@ -16,6 +16,8 @@ buildNumber.properties
 .settings/
 .plugins
 
+.metadata
+
 # Maven
 log/
 target/

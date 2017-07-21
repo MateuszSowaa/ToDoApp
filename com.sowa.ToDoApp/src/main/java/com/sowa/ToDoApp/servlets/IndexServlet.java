@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import com.sowa.ToDoApp.dao.TasksDAO;
 import com.sowa.ToDoApp.entities.Task;
 
+
+
 public class IndexServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -22,10 +24,12 @@ public class IndexServlet extends HttpServlet {
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		TasksDAO dao = (TasksDAO)request.getAttribute("tasksDAO");
-		List<Task> tasks = dao.getTasks();
-		request.setAttribute("tasks", tasks);
-		request.getRequestDispatcher("WEB-INF/view/index.jsp").forward(request, response);
+		response.setContentType("text/plain; charset=UTF-8");
+		TasksDAO dao =  new TasksDAO();
+		List<Task> lista = dao.getTasks();
+		for(Task t : lista)
+			response.getWriter().println(t.getId() + t.getName() + t.getDescription() + t.getDate());
+
 	}
 
 	

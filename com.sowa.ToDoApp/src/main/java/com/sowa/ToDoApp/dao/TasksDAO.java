@@ -6,11 +6,12 @@ import javax.persistence.EntityTransaction;
 import java.util.List;
 
 import com.sowa.ToDoApp.entities.Task;
+import com.sowa.ToDoApp.utils.DBConfig;
 
 public class TasksDAO {
 	private EntityManager em;
-	public TasksDAO(EntityManager em){
-		this.em = em;
+	public TasksDAO(){
+		this.em = DBConfig.getEntityManagerFactory().createEntityManager();
 	}
 	
 	public List<Task> getTasks(){

@@ -4,9 +4,7 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
-  <listener>
-  	<listener-class>com.sowa.ToDoApp.utils.InitialDB</listener-class>
-  </listener>
+ 
    <listener>
   	<listener-class>com.sowa.ToDoApp.utils.DBConfig</listener-class>
   </listener>

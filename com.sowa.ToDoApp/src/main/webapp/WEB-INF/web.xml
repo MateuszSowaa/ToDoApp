@@ -14,8 +14,18 @@
   	<description></description>
   	<servlet-class>com.sowa.ToDoApp.servlets.IndexServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>AddTaskServlet</servlet-name>
+  	<display-name>AddTaskServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.sowa.ToDoApp.servlets.AddTaskServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>IndexServlet</servlet-name>
-  	<url-pattern>/index</url-pattern>
+  	<url-pattern>/ToDo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AddTaskServlet</servlet-name>
+  	<url-pattern>/addTask</url-pattern>
   </servlet-mapping>
 </web-app>

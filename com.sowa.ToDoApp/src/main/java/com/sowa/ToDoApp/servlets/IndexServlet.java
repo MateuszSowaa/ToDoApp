@@ -1,8 +1,8 @@
 package com.sowa.ToDoApp.servlets;
 
 import java.io.IOException;
-import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -24,17 +24,23 @@ public class IndexServlet extends HttpServlet {
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/plain; charset=UTF-8");
-		TasksDAO dao =  new TasksDAO();
-		List<Task> lista = dao.getTasks();
-		for(Task t : lista)
-			response.getWriter().println(t.getId() + t.getName() + t.getDescription() + t.getDate());
-
+		String stringId = request.getParameter("id");
+		if(stringId != null){
+			int id = Integer.parseInt(stringId);
+			TasksDAO dao =  new TasksDAO();
+			Task t = dao.getTask(id);
+			request.setAttribute("task", t);
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/view/index.jsp");
+			rd.forward(request, response);
+		//for(Task t : lista)
+		//	response.getWriter().println(t.getId() + t.getName() + t.getDescription() + t.getDate());
+		}else 
+			response.sendRedirect(request.getContextPath() + "/");
 	}
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 		doGet(request, response);
 	}
 

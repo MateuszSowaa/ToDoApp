@@ -16,18 +16,23 @@
 			<th>Name</th>
             <th>Description</th>
 			<th>Date added</th>
+		
 		</tr>
-		<c:forEach var="id" items="${tasks}">
+		<c:forEach var="task" items="${tasks}">
 			<tr>
                 <td> x </td> 
                 <td> v </td>
-				<td>${tasks.name}</td>
-                <td>${tasks.description}</td>
-				<td> </td>
+				<td>${task.name}</td>
+                <td>${task.description}</td>
+				<td>${task.date}</td>
 				
 		</c:forEach>
-		
+	
 	</table>
+	<c:url value="/newTask" var="urlNewTask" scope="page" />
+	<form action="${urlNewTask}">
+		<input type="submit" value="Add New Task">
+	</form>
 	
 </body>
 </html>

@@ -4,6 +4,12 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <listener>
+  	<listener-class>com.sowa.ToDoApp.utils.InitialDB</listener-class>
+  </listener>
+   <listener>
+  	<listener-class>com.sowa.ToDoApp.utils.DBConfig</listener-class>
+  </listener>
   <servlet>
   	<servlet-name>IndexServlet</servlet-name>
   	<display-name>IndexServlet</display-name>

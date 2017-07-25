@@ -12,6 +12,6 @@
 	<h1>List of Tasks</h1>
 	<%=request.getAttribute("task")%>
  
-
+	
 </body>
 </html>

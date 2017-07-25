@@ -4,9 +4,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Add new task</title>
 </head>
 <body>
-
+	<form method="post">
+		<p>Name of task: </p>
+		<input type="text" name="name" maxlength="255" />
+		<p>Descryption: </p>
+		<textarea rows="9" cols="40" name="desc"></textarea><br />
+		<input type="submit" value="add"/>
+	</form>
 </body>
 </html>

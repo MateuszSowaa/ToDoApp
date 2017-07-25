@@ -32,7 +32,7 @@ public class IndexServlet extends HttpServlet {
 		t.setDescription("kolorowe i białe");
 		dao.addTask(t);
 		request.setAttribute("task", t.getName());
-		RequestDispatcher rd = request.getRequestDispatcher("/ToDo.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/ToDo.jsp");
 		rd.forward(request, response);
 	}
 

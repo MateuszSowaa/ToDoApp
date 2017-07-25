@@ -1,12 +1,17 @@
 package com.sowa.ToDoApp.entities;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name="task")
-public class Task {
+public class Task implements Serializable  {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue
 	private int id;
@@ -14,7 +19,7 @@ public class Task {
 	@Lob()
 	private String description;
 	private Timestamp date;
-	private Boolean status;
+	private Boolean status = false;
 	
 	public int getId() {
 		return id;

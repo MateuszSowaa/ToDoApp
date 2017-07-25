@@ -1,16 +1,16 @@
 package com.sowa.ToDoApp.servlets;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
+
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.sowa.ToDoApp.dao.TaskDAO;
 import com.sowa.ToDoApp.entities.Task;
 
 
@@ -25,15 +25,15 @@ public class IndexServlet extends HttpServlet {
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/plain; charset=utf-8");
-
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("com.sowa.ToDoApp");
-		EntityManager em = emf.createEntityManager();
-		Task task = em.find(Task.class, 1);
+		TaskDAO dao = new TaskDAO();
+		Task t = new Task();
 		
-		PrintWriter pw = response.getWriter();
-		pw.println(task.getName());
-
+		t.setName("pranie");
+		t.setDescription("kolorowe i białe");
+		dao.addTask(t);
+		request.setAttribute("task", t.getName());
+		RequestDispatcher rd = request.getRequestDispatcher("/ToDo.jsp");
+		rd.forward(request, response);
 	}
 
 	
@@ -41,5 +41,5 @@ public class IndexServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
-
+	
 }

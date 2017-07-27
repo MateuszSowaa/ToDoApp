@@ -2,6 +2,7 @@ package com.sowa.ToDoApp.dao;
 
 import java.util.List;
 
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -44,5 +45,14 @@ public class TaskDAO {
 			return false;
 			
 		}
+	}
+	public void deleteTask(int id){
+		Task task = this.em.find(Task.class, id);
+		if(task != null){
+			em.getTransaction().begin();
+			em.remove(task);
+			em.getTransaction().commit();
+		}
+		
 	}
 }

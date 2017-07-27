@@ -1,10 +1,10 @@
 package com.sowa.ToDoApp.servlets;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
 
 
-
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -23,23 +23,21 @@ public class IndexServlet extends HttpServlet {
       
     }
 
-	
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    	response.setContentType("txt/html");
+		//PrintWriter pw = response.getWriter();
 		TaskDAO dao = new TaskDAO();
-		Task t = new Task();
-		
-		t.setName("pranie");
-		t.setDescription("kolorowe i białe");
-		dao.addTask(t);
-		request.setAttribute("task", t.getName());
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/ToDo.jsp");
-		rd.forward(request, response);
+		//Task t = new Task();
+		List<Task> lista = dao.getTasks();
+		dao.deleteTask(9);
+		request.setAttribute("tasks", lista);
+		request.getRequestDispatcher("/WEB-INF/ToDo.jsp").forward(request, response);
 	}
-
+	
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(request, response);
+		
 	}
 	
 }

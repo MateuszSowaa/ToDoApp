@@ -5,16 +5,24 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Add new task</title>
-<link href="/css/loginstyle.css" rel="stylesheet" type="text/css">
+<link href="<%=request.getContextPath()%>/css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<form method="post">
-		<p>Name of task: </p>
-		<input type="text" name="name" maxlength="255" />
-		<p>Descryption: </p>
-		<textarea rows="9" cols="40" name="desc"></textarea><br />
-		<input type="submit" value="add"/>
-	</form>
-	<a href="index">Show Task</a>
+	<div id="formularz">
+		<form  method="post">
+			<p>Name of task: </p>
+			<input type="text" name="name" maxlength="255"  />
+			<p>Descryption: </p>
+			<textarea rows="9" cols="40" name="desc" ></textarea><br />
+			<input id="submit" type="submit" value="add"/>
+		</form>
+		
+	
+	</div>
+	<div id="formularz">
+		<a id="link" href="index">Show Task</a>
+	</div>
+	
+	
 </body>
 </html>

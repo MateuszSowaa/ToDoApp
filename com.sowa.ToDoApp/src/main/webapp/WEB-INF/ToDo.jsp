@@ -12,40 +12,49 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>ToDo</title>
-<link href="styles.css" rel="stylesheet" type="text/css">
+<link href="<%=request.getContextPath()%>/css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<h1>List of Tasks</h1>
-	<table border="1">
-		<tr>
-			<th>id</th>
-			<th>name</th>
-			<th>descryption</th>
-			<th>date</th>
-		</tr>
-	<c:forEach var="task" items="${tasks}">
-		<tr>
-			<td>
-				${task.id}
-			</td>
-			<td>
-				${task.name}
-			</td>
-			<td>
-				${task.description}
-			</td>
-			<td>
-				<fmt:formatDate value="${task.date}" dateStyle="short" timeStyle="short" type="both" /> 
-			</td>
-			
-	</c:forEach>
-	</table>
-	<a href="AddNewTask">Add task</a>
 	
-	<form action="DeleteTask" method=post>
-		<input type="number" name="id">
-		<input type="submit" value="del">
-	</form>
 	
+	<div id="tabela">
+		<h1>List of Tasks</h1>
+		<table>
+			<tr>
+				<th>id</th>
+				<th>name</th>
+				<th>descryption</th>
+				<th>date</th>
+			</tr>
+		<c:forEach var="task" items="${tasks}">
+			<tr>
+				<td>
+					${task.id}
+				</td>
+				<td>
+					${task.name}
+				</td>
+				<td>
+					${task.description}
+				</td>
+				<td>
+					<fmt:formatDate value="${task.date}" dateStyle="short" timeStyle="short" type="both" /> 
+				</td>
+				
+		</c:forEach>
+		</table>
+	</div>
+	<div id="formularz">
+		
+		
+		<h1>Delete task </h1>
+		<form action="DeleteTask" method=post>
+			<input type="number" name="id" min="1" >
+			<input id="submit" type="submit" value="del">
+		</form>	
+	</div>
+	<div id="formularz">
+		<a id="link" href="AddNewTask">Add task</a>
+	</div>
 </body>
 </html>

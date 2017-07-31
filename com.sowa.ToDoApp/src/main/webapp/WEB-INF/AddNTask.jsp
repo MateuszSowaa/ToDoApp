@@ -14,5 +14,6 @@
 		<textarea rows="9" cols="40" name="desc"></textarea><br />
 		<input type="submit" value="add"/>
 	</form>
+	<a href="index">Show Task</a>
 </body>
 </html>

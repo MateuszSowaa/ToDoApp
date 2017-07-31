@@ -4,22 +4,16 @@ import java.util.List;
 
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
-import javax.persistence.spi.PersistenceProvider;
 
-import org.hibernate.jpa.HibernatePersistenceProvider;
 
 import com.sowa.ToDoApp.entities.Task;
 
 public class TaskDAO {
 	private EntityManager em;
-	private static EntityManagerFactory emf;
 	
-	public TaskDAO(){
-		PersistenceProvider provider = new HibernatePersistenceProvider();
-		emf = provider.createEntityManagerFactory("com.sowa.ToDoApp", null);
-		this.em = emf.createEntityManager();
+	public TaskDAO(EntityManager em){
+		this.em = em;
 	}
 	
 	public List<Task> getTasks(){

@@ -26,10 +26,10 @@ public class AddNewTask extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		TaskDAO dao =(TaskDAO) request.getAttribute("taskDAO");
 		String name = request.getParameter("name");
 		String desc = request.getParameter("desc");
 		if(name != null && desc != null){
-			TaskDAO dao = new TaskDAO();
 			Task t = new Task();
 			
 			t.setName(name);

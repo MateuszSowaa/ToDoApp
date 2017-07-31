@@ -31,7 +31,6 @@ mvn.properties
 .checkstyle
 .classpath
 .fbprefs
-.project
 .settings
 .idea
 *.iml

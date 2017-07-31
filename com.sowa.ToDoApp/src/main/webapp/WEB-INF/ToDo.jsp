@@ -12,6 +12,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>ToDo</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<h1>List of Tasks</h1>
@@ -21,7 +22,6 @@
 			<th>name</th>
 			<th>descryption</th>
 			<th>date</th>
-			<th>DELETE</th>
 		</tr>
 	<c:forEach var="task" items="${tasks}">
 		<tr>
@@ -37,11 +37,15 @@
 			<td>
 				<fmt:formatDate value="${task.date}" dateStyle="short" timeStyle="short" type="both" /> 
 			</td>
-			<td>
-				
-			</td>
+			
 	</c:forEach>
 	</table>
 	<a href="AddNewTask">Add task</a>
+	
+	<form action="DeleteTask" method=post>
+		<input type="number" name="id">
+		<input type="submit" value="del">
+	</form>
+	
 </body>
 </html>

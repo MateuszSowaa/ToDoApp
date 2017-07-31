@@ -22,6 +22,12 @@
   	<description></description>
   	<servlet-class>com.sowa.ToDoApp.servlets.AddNewTask</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>DeleteTask</servlet-name>
+  	<display-name>DeleteTask</display-name>
+  	<description></description>
+  	<servlet-class>com.sowa.ToDoApp.servlets.DeleteTask</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>IndexServlet</servlet-name>
   	<url-pattern>/index</url-pattern>
@@ -29,5 +35,9 @@
   <servlet-mapping>
   	<servlet-name>AddNewTask</servlet-name>
   	<url-pattern>/AddNewTask</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeleteTask</servlet-name>
+  	<url-pattern>/DeleteTask</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Add new task</title>
+<link href="/css/loginstyle.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<form method="post">

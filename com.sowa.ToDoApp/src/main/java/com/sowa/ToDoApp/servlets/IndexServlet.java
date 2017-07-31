@@ -1,7 +1,6 @@
 package com.sowa.ToDoApp.servlets;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 
 import javax.servlet.ServletException;

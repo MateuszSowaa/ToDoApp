@@ -1,4 +1,4 @@
-package com.sowa.ToDoApp.servlets;
+package com.sowa.todoapp.servlets;
 
 import java.io.IOException;
 
@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.sowa.ToDoApp.dao.TaskDAO;
-import com.sowa.ToDoApp.entities.Task;
+import com.sowa.todoapp.dao.TaskDAO;
+import com.sowa.todoapp.entities.Task;
 
 
 public class AddNewTask extends HttpServlet {

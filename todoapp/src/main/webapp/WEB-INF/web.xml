@@ -5,28 +5,28 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
   <listener>
-  	<listener-class>com.sowa.ToDoApp.utils.DBConfig</listener-class>
+  	<listener-class>com.sowa.todoapp.utils.DBConfig</listener-class>
   </listener>
   <listener>
-  	<listener-class>com.sowa.ToDoApp.utils.IDB</listener-class>
+  	<listener-class>com.sowa.todoapp.utils.IDB</listener-class>
   </listener>
   <servlet>
   	<servlet-name>IndexServlet</servlet-name>
   	<display-name>IndexServlet</display-name>
   	<description></description>
-  	<servlet-class>com.sowa.ToDoApp.servlets.IndexServlet</servlet-class>
+  	<servlet-class>com.sowa.todoapp.servlets.IndexServlet</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>AddNewTask</servlet-name>
   	<display-name>AddNewTask</display-name>
   	<description></description>
-  	<servlet-class>com.sowa.ToDoApp.servlets.AddNewTask</servlet-class>
+  	<servlet-class>com.sowa.todoapp.servlets.AddNewTask</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>DeleteTask</servlet-name>
   	<display-name>DeleteTask</display-name>
   	<description></description>
-  	<servlet-class>com.sowa.ToDoApp.servlets.DeleteTask</servlet-class>
+  	<servlet-class>com.sowa.todoapp.servlets.DeleteTask</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>IndexServlet</servlet-name>

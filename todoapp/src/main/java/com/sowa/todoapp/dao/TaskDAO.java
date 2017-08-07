@@ -1,4 +1,4 @@
-package com.sowa.ToDoApp.dao;
+package com.sowa.todoapp.dao;
 
 import java.util.List;
 
@@ -6,13 +6,12 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
+import com.sowa.todoapp.entities.Task;
 
-import com.sowa.ToDoApp.entities.Task;
-
-public class TaskDAO {
+public final class TaskDAO {
 	private EntityManager em;
 	
-	public TaskDAO(EntityManager em){
+	public  TaskDAO(EntityManager em){
 		this.em = em;
 	}
 	

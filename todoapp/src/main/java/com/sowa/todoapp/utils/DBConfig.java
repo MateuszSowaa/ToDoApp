@@ -1,4 +1,4 @@
-package com.sowa.ToDoApp.utils;
+package com.sowa.todoapp.utils;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -29,7 +29,7 @@ public class DBConfig implements ServletContextListener {
      * @see ServletContextListener#contextInitialized(ServletContextEvent)
      */
     public void contextInitialized(ServletContextEvent arg0)  { 
-    	emf = Persistence.createEntityManagerFactory("com.sowa.ToDoApp");
+    	emf = Persistence.createEntityManagerFactory("com.sowa.todoapp");
     }
 
 	public static EntityManager createEntityManager() {

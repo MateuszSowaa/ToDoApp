@@ -4,8 +4,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ page import="com.sowa.ToDoApp.entities.Task" %>
-<%@ page import="com.sowa.ToDoApp.dao.TaskDAO" %>
+<%@ page import="com.sowa.todoapp.entities.Task" %>
+<%@ page import="com.sowa.todoapp.dao.TaskDAO" %>
 <%@ page isELIgnored="false" %> 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>

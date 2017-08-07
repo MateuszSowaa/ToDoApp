@@ -1,11 +1,11 @@
-package com.sowa.ToDoApp.utils;
+package com.sowa.todoapp.utils;
 
 import javax.persistence.EntityManager;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletRequestEvent;
 import javax.servlet.ServletRequestListener;
 
-import com.sowa.ToDoApp.dao.TaskDAO;
+import com.sowa.todoapp.dao.TaskDAO;
 
 /**
  * Application Lifecycle Listener implementation class IDB

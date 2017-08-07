@@ -1,4 +1,4 @@
-package com.sowa.ToDoApp.entities;
+package com.sowa.todoapp.entities;
 
 import java.io.Serializable;
 import java.sql.Timestamp;

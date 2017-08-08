@@ -14,8 +14,10 @@ buildNumber.properties
 .classpath
 .settings/
 .plugins
-
+.recommenders
 .metadata
+RemoteSystemsTempFiles
+.project
 
 # Maven
 log/

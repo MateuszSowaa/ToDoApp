@@ -12,22 +12,12 @@ import javax.servlet.ServletContextListener;
  */
 public class DBConfig implements ServletContextListener {
 	private static EntityManagerFactory emf;
-    public DBConfig() {
-        // TODO Auto-generated constructor stub
-    }
 
-	/**
-     * @see ServletContextListener#contextDestroyed(ServletContextEvent)
-     */
     public void contextDestroyed(ServletContextEvent sce) {
 		if(emf != null && emf.isOpen())
 			emf.close();
 	}
 	
-
-	/**
-     * @see ServletContextListener#contextInitialized(ServletContextEvent)
-     */
     public void contextInitialized(ServletContextEvent arg0)  { 
     	emf = Persistence.createEntityManagerFactory("com.sowa.todoapp");
     }

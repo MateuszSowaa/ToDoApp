@@ -15,8 +15,6 @@
 <link href="<%=request.getContextPath()%>/css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	
-	
 	<div id="tabela">
 		<h1>List of Tasks</h1>
 		<table>
@@ -40,13 +38,10 @@
 				<td>
 					<fmt:formatDate value="${task.date}" dateStyle="short" timeStyle="short" type="both" /> 
 				</td>
-				
 		</c:forEach>
 		</table>
 	</div>
 	<div id="formularz">
-		
-		
 		<h1>Delete task </h1>
 		<form action="DeleteTask" method=post>
 			<input type="number" name="id" min="1" >

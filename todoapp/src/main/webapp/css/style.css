@@ -27,14 +27,17 @@ table{
 	width:100%;
 	border:2px solid #372f2f;
 }
+
 th{
 	padding:5px;
 	border:2px solid #372f2f;
 }
+
 td{
 	padding:5px;
 	border:2px solid #372f2f;
 }
+
 #link{
 	border:2px solid #ccc;
     width:100%; 
@@ -45,7 +48,6 @@ td{
 	paddnig:20px;
 	font-weight:bold; 
 	font-size: 14px;
-	
 }
 
 #formularz {
@@ -73,21 +75,18 @@ td{
 	margin-bottom:25px;
 	width: 100%; 
     max-width: 100%;
-    
 }
+
 #formularz input {
 	padding:5px; 
 	border-radius:3px; 
 	border:1px solid #ccc; 
 	margin-bottom:25px;
 	width: 50% 
-    
-
 }
 
 #formularz input#submit {
-    
-	width:100%; 
+    width:100%; 
 	cursor:pointer; 
 	margin-bottom:0px;
 }

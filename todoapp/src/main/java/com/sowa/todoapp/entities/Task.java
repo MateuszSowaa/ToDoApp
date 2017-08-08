@@ -8,23 +8,21 @@ import javax.persistence.*;
 @Entity
 @Table(name="task")
 public class Task implements Serializable  {
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
+	
 	@Id
 	@GeneratedValue
-	private int id;
+	private Long id;
 	private String name;
 	@Lob()
 	private String description;
 	private Timestamp date;
 	private Boolean status = false;
 	
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getName() {

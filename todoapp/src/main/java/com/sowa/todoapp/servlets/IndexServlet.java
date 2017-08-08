@@ -13,29 +13,15 @@ import com.sowa.todoapp.entities.Task;
 
 public class IndexServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-   
-    public IndexServlet() {
-        super();
-      
-    }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	
     	TaskDAO dao = (TaskDAO)request.getAttribute("taskDAO");
-		//Task t = dao.getTask(4);
     	List<Task> t = dao.getTasks();
 		request.setAttribute("tasks", t);
 		request.getRequestDispatcher("/WEB-INF/ToDo.jsp").forward(request, response);
-		
 	}
-		
     
-	
-	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
 		doGet(request,response);
 	}
-	
 }

@@ -16,13 +16,9 @@
 			<textarea rows="9" cols="40" name="desc" ></textarea><br />
 			<input id="submit" type="submit" value="add"/>
 		</form>
-		
-	
 	</div>
 	<div id="formularz">
 		<a id="link" href="index">Show Task</a>
 	</div>
-	
-	
 </body>
 </html>

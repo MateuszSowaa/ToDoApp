@@ -21,12 +21,14 @@ public final class TaskDAO {
 		return tasks;
 	}
 	
-	public Task getTask(int id){
+	public Task getTask(Long id){
 		this.em.clear();
 		return this.em.find(Task.class, id);
 	}
+	
 	public boolean addTask(Task t){
 		EntityTransaction et = em.getTransaction();
+		
 		try {
 			et.begin();
 			em.persist(t);
@@ -36,16 +38,16 @@ public final class TaskDAO {
 			e.printStackTrace();
 			et.rollback();
 			return false;
-			
 		}
 	}
-	public void deleteTask(int id){
+	
+	public void deleteTask(Long id){
 		Task task = this.em.find(Task.class, id);
+		
 		if(task != null){
 			em.getTransaction().begin();
 			em.remove(task);
 			em.getTransaction().commit();
-		}
-		
+		}	
 	}
 }
